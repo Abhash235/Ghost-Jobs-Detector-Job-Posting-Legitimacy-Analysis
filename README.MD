@@ -38,6 +38,7 @@ The dataset is highly unbalanced with 50.933% being real and only 49.066 % of th
 
 ## Time-Based Exploratory Data Analysis (EDA)
 Time-based EDA was performed to understand how ghost job postings vary over different years and months and to analyze how long job postings remain active before their application deadlines.
+![Images](Images/datainfo.png)
 
 ## 1. Fake vs. Real Job Postings by Year
 This analysis compares the number of legitimate and fake job postings across different years.
@@ -48,6 +49,8 @@ Identify yearly trends in job postings.
 Compare the volume of fake and real job postings over time.
 Understand whether the proportion of fake job postings changes across different years.
 
+![Images](Images/Realvsfake.png)
+
 ## 2. Fake Jobs by Month
 Monthly analysis was performed to identify seasonal patterns in fake job postings.
 
@@ -57,6 +60,8 @@ Determine which months have a higher number of fake job postings.
 Identify possible seasonal variations in ghost job activity.
 Compare the distribution of fake postings across different months.
 
+![Images](Images/Month_based_eda.png)
+
 ## 3 3. Job Posting Duration
 Job posting duration was calculated using the difference between the posting date and the application deadline.
 Objective 
@@ -64,6 +69,8 @@ Understand the typical duration of job postings.
 Identify unusually short or long application periods.
 Compare posting duration patterns between legitimate and fake job postings.
 Determine whether posting duration could be useful as a feature for ghost job detection.
+
+![Images](Images/Posting_duration_eda.png)
 
 
 # 1. Company Information EDA
@@ -75,6 +82,8 @@ Identify missing company information patterns.
 Compare company information availability between real and fake job postings.
 Determine whether incomplete employer information can act as a potential indicator of a ghost job.
 
+![Images](Images/Company_eda.png)
+
 # 2. Salary-Based EDA
 
 Salary information was analyzed to determine whether the availability of salary details differs between legitimate and fake job postings.
@@ -85,9 +94,13 @@ Determine the availability of salary information.
 Compare salary information patterns between real and fake jobs.
 Investigate whether missing salary information can be associated with suspicious job postings.
 
+![Images](Images/Salary_based_eda.png)
+
 # 3. Job Characteristics EDA
 
 The dataset was analyzed based on different job characteristics to understand how fake job postings are distributed across various categories.
+
+![Images](Images/Industery_based_eda.png)
 
 # 4. Fake Job Postings by Location
 
@@ -99,6 +112,8 @@ Identify locations with a higher number of fake job postings.
 Compare fake job activity across different geographical regions.
 Investigate whether remote and location-specific postings show different patterns.
 
+![Images](Images/Loaction_based_eda.png)
+
 # 5. Fake Job Postings by Employment Type
 
 Employment type was analyzed to determine how fake job postings are distributed among different employment arrangements.
@@ -108,6 +123,7 @@ Objective:
 Compare the number of fake postings across employment types.
 Identify employment categories with relatively high fake-job activity.
 Investigate whether certain employment arrangements are more commonly associated with suspicious postings.
+![Images](Images/Employment_based_eda.png)
 
 
 # 6. Text-Based EDA — Job Description Length
@@ -119,9 +135,35 @@ Compare the length of real and fake job descriptions.
 Identify whether suspicious postings tend to contain shorter or less detailed descriptions.
 Investigate whether description length can be used as a potential feature for ghost job detection.
 
+![Images](Images/Text_based_eda.png)
 
-# SImprovement
+# Improvement
 The dataset that is used in this project is very unbalanced. Most jobs are real, and few are fraudulent. Due to this, real jobs are being identified quite well. Certain techniques like SMOTE can be used to generate synthetic minority class samples. A balanced dataset should be able to generate better results.
+
+
+## Power BI Dashboard
+
+The cleaned and analyzed dataset was imported into **Power BI** to create an interactive dashboard for analyzing ghost job postings.
+
+### Dashboard Highlights
+
+* **KPI Cards:** Total Jobs, Real Jobs, Fake Jobs, Fake Job Rate, and Average Posting Duration.
+* **Time Analysis:** Fake vs. real job postings by year and monthly posting trends.
+* **Company Analysis:** Availability of company information and its relationship with fake postings.
+* **Salary Analysis:** Fake job patterns based on salary information availability.
+* **Job Characteristics:** Analysis by industry, education, experience, and employment type.
+* **Location Analysis:** Distribution of fake job postings across different locations.
+* **Text Analysis:** Comparison of job-description length between real and fake postings.
+* **Interactive Filters:** Year, month, quarter, season, industry, employment type, salary, education, experience, and location.
+
+The dashboard provides an interactive way to explore patterns and characteristics associated with fake job postings.
+
+**Tools:** Python • Pandas • Matplotlib • Power BI • DAX
+
+
+![Images](Images/Dashboard1.png)
+![Images](Images/Dashboard2.png)
+
 
 
 
